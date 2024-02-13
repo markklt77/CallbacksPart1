@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `exactly` that accepts an array, a number, and a callback as
 arguments. The function should return a boolean indicating whether or not there are
@@ -28,7 +30,14 @@ console.log(result4); // true
 *******************************************************************************/
 
 function exactly(array, num, cb) {
-  // Your code here 
+  let count = 0;
+  for (let el of array) {
+    if (cb(el)) {
+      count++;
+    }
+  }
+
+  return count === num;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
