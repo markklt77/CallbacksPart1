@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `count` that accepts an array and a callback as arguments. The
 function should return the number of elements of the array that return true when
@@ -27,7 +29,15 @@ console.log(result4); // 0
 *******************************************************************************/
 
 function count(array, cb) {
-  // Your code here 
+  let count = 0;
+
+  for (let el of array) {
+    if (cb(el)) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
