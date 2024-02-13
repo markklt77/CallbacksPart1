@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `myFilter` that accepts an array and a callback as arguments.
 The function should call the callback on each element of the array, passing in
@@ -20,7 +22,16 @@ console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
 
 function myFilter(array, cb) {
-    // Your code here 
+    let arr = [];
+
+    for (let el of array) {
+        let tf = cb(el);
+        if (tf) {
+            arr.push(el);
+        }
+    }
+
+    return arr;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
