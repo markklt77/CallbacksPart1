@@ -1,3 +1,7 @@
+
+
+
+
 /*******************************************************************************
 Write a function `myMap` that accepts an array and a callback as arguments.
 The function return an array of new elements obtained by calling the callback on
@@ -17,7 +21,13 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
 function myMap(array, cb) {
-    // Your code here 
+    let arr = [];
+
+    for (let el of array) {
+        arr.push(cb(el));
+    }
+
+    return arr;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
