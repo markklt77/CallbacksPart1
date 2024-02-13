@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `reject` that accepts an array and callback as arguments. The
 function should call the callback for each element of the array, passing in the
@@ -22,7 +24,16 @@ console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth'
 *******************************************************************************/
 
 function reject(array, cb) {
-  // Your code here 
+  let arr = [];
+
+  for (let el of array) {
+    let tf = cb(el);
+    if (!tf) {
+      arr.push(el);
+    }
+  }
+
+  return arr;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
