@@ -1,3 +1,6 @@
+
+
+
 /*******************************************************************************
 Write a function `mapMutator` that accepts an array and a callback as arguments.
 The function should pass each element and index into the callback and use the result
@@ -19,7 +22,9 @@ console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
 
 function mapMutator(array, cb) {
-  // Your code here 
+  for (let i = 0; i < array.length; i++) {
+    array[i] = cb(array[i], i);
+  }
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
