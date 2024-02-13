@@ -1,3 +1,6 @@
+
+
+
 /*******************************************************************************
 Write a function `suffixCipher` that accepts a sentence and object as arguments.
 The object contains suffixes as keys and callbacks as values. The `suffixCipher`
@@ -32,7 +35,19 @@ console.log(suffixCipher('incremental progress is very instrumental', cipher2));
 *******************************************************************************/
 
 function suffixCipher(sentence, cipher) {
-  // Your code here 
+  let arr = sentence.split(' ');
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let key in cipher) {
+      if (arr[i].endsWith(key)) {
+        arr[i] = cipher[key](arr[i]);
+      }
+    }
+    result.push(arr[i]);
+  }
+
+  return arr.join(' ');
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
