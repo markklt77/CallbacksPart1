@@ -1,3 +1,6 @@
+
+
+
 /*******************************************************************************
 Write a function `myEvery` that accepts an array and a callback as arguments.
 The function should return a boolean indicating whether or not all elements of
@@ -22,7 +25,13 @@ console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
 *******************************************************************************/
 
 function myEvery(array, cb) {
-    // Your code here 
+    for (let el of array) {
+        if(!cb(el)) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
