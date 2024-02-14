@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `firstIndex` that accepts an array and a callback as arguments.
 The function should return the index of the first element of the array that
@@ -23,7 +25,13 @@ console.log(result3); // -1
 *******************************************************************************/
 
 function firstIndex(array, cb) {
-  // Your code here 
+  for (let i = 0; i < array.length; i++) {
+    if (cb(array[i])) {
+      return i;
+    }
+  }
+
+  return -1;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
