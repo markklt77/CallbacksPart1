@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `none` that accepts an array and a callback as arguments.
 The function should call the callback for each element of the array, passing in
@@ -29,7 +31,13 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here 
+  for (let el of array) {
+    if (cb(el)) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
