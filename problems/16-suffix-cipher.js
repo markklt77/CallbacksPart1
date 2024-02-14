@@ -44,7 +44,6 @@ function suffixCipher(sentence, cipher) {
         arr[i] = cipher[key](arr[i]);
       }
     }
-    result.push(arr[i]);
   }
 
   return arr.join(' ');
