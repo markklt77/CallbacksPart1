@@ -1,3 +1,5 @@
+
+
 /*******************************************************************************
 Write a function `one` that accepts an array and a callback as arguments. The
 function should call the callback for each element of the array, passing in the
@@ -38,7 +40,13 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  // Your code here 
+  let count = 0;
+  array.forEach((el,i)=>{
+    if (cb(el,i)) count ++;
+
+  })
+
+  return count === 1;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
